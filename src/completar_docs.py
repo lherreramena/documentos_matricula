@@ -36,7 +36,7 @@ def completar_contrato(datos, plantilla):
 
 def generar_contratos():
     # Leer datos desde el archivo JSON
-    data_src = './assests/json'
+    data_src = './assets/json'
     json_data = os.path.join(data_src, JSON_DATOS)
     with open(json_data, "r", encoding="utf-8") as f:
         contratos = json.load(f)["contratos"]
