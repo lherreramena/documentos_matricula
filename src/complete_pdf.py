@@ -62,20 +62,14 @@ def generar_contratos():
     data_src = './assets/json'
     json_data = os.path.join(data_src, JSON_DATOS)
     with open(json_data, "r", encoding="utf-8") as f:
-    #with open(JSON_DATOS, "r", encoding="utf-8") as f:
         contratos = json.load(f)["contratos"]
 
     os.makedirs("Contratos_PDF_Completados", exist_ok=True)
 
     for contrac_name in contratos:
-        #doc_completado = completar_contrato(contratos[contrac_name], contrac_name)
         output_name = contrac_name + "_completado.pdf"
-        #output_file = os.path.join("Contratos_Completados", f"CONTRATO-MATRICULA-COMPLETADO-{i}.docx")
-        output_file = os.path.join("Contratos_Completados", output_name)
 
-    #for i, contrato in enumerate(contratos, start=1):
-        overlay_file = contrac_name + "overlay.pdf"
-        #output_file = os.path.join("Contratos_PDF_Completados", f"CONTRATO-MATRICULA-COMPLETADO-{i}.pdf")
+        overlay_file = contrac_name + "_overlay.pdf"
         output_file = os.path.join("Contratos_PDF_Completados", output_name)
 
         #crear_overlay(contrato, overlay_file)
