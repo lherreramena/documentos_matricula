@@ -45,9 +45,12 @@ def generar_contratos():
     os.makedirs("Contratos_Completados", exist_ok=True)
 
     # Generar contratos completados
-    for i, contrato in enumerate(contratos, start=1):
-        doc_completado = completar_contrato(contrato, PLANTILLA)
-        output_file = os.path.join("Contratos_Completados", f"CONTRATO-MATRICULA-COMPLETADO-{i}.docx")
+    #for i, contrato in enumerate(contratos, start=1):
+    for contrac_name in contratos:
+        doc_completado = completar_contrato(contratos[contrac_name], contrac_name)
+        output_name = contrac_name[:-5] + "_completado.docx"
+        #output_file = os.path.join("Contratos_Completados", f"CONTRATO-MATRICULA-COMPLETADO-{i}.docx")
+        output_file = os.path.join("Contratos_Completados", output_name)
         doc_completado.save(output_file)
         print(f"✅ Contrato completado guardado en: {output_file}")
 
