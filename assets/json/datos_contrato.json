@@ -1,0 +1,29 @@
+
+{
+  "contratos": [
+    {
+      "apoderado": {
+        "nombre": "Juan Pérez",
+        "calidad": "Padre",
+        "profesion": "Ingeniero",
+        "rut": "12.345.678-9",
+        "domicilio": {
+          "calle": "Av. Siempre Viva",
+          "numero": "123",
+          "casa": "A",
+          "depto": "",
+          "comuna": "La Florida"
+        }
+      },
+      "alumnos": [
+        {"nombre": "Pedro Pérez", "curso": "3° Básico"},
+        {"nombre": "María Pérez", "curso": "1° Medio"}
+      ],
+      "firma": {
+        "nombre": "Juan Pérez",
+        "ci": "12.345.678-9",
+        "fecha": "26 de Noviembre de 2025"
+      }
+    }
+  ]
+}
