@@ -5,17 +5,11 @@ from PyPDF2 import PdfReader, PdfWriter
 import json
 import os
 
-# Archivos
 PLANTILLA_PDF = "CONTRATO-MATRICULA-2025-La-Florida.pdf"
 JSON_DATOS = "datos_contratos.json"
 
 def crear_overlay(datos, output_overlay):
-    """
-    Crea un PDF overlay con los datos del contrato usando reportlab.
-    """
     c = canvas.Canvas(output_overlay, pagesize=letter)
-
-    # Coordenadas aproximadas (ajustar según el PDF)
     c.setFont("Helvetica", 10)
 
     # Cubrir campos vacíos con rectángulos blancos
@@ -42,13 +36,7 @@ def crear_overlay(datos, output_overlay):
     c.save()
 
 def fusionar_pdf(plantilla, overlay, output_final):
-    """
-    Fusiona el PDF original con el overlay.
-    """
-    contract_src = './assets/docs'
-    contract_template = os.path.join(contract_src, plantilla) + ".pdf"
-
-    reader = PdfReader(contract_template)
+    reader = PdfReader(plantilla)
     overlay_reader = PdfReader(overlay)
     writer = PdfWriter()
 
@@ -62,24 +50,19 @@ def fusionar_pdf(plantilla, overlay, output_final):
         writer.write(f)
 
 def generar_contratos():
-    data_src = './assets/json'
-    json_data = os.path.join(data_src, JSON_DATOS)
-    with open(json_data, "r", encoding="utf-8") as f:
+    with open(JSON_DATOS, "r", encoding="utf-8") as f:
         contratos = json.load(f)["contratos"]
 
-    os.makedirs("Contratos_PDF_Completados", exist_ok=True)
+    os.makedirs("Contratos_PDF_Corregidos", exist_ok=True)
 
-    for contrac_name in contratos:
-        output_name = contrac_name + "_completado.pdf"
+    for i, contrato in enumerate(contratos, start=1):
+        overlay_file = f"overlay_{i}.pdf"
+        output_file = os.path.join("Contratos_PDF_Corregidos", f"CONTRATO-MATRICULA-CORREGIDO-{i}.pdf")
 
-        overlay_file = contrac_name + "_overlay.pdf"
-        output_file = os.path.join("Contratos_PDF_Completados", output_name)
+        crear_overlay(contrato, overlay_file)
+        fusionar_pdf(PLANTILLA_PDF, overlay_file, output_file)
 
-        #crear_overlay(contrato, overlay_file)
-        crear_overlay(contratos[contrac_name], overlay_file)
-        fusionar_pdf(contrac_name, overlay_file, output_file)
-
-        print(f"✅ Contrato PDF completado: {output_file}")
+        print(f"✅ Contrato PDF corregido: {output_file}")
 
 if __name__ == "__main__":
     generar_contratos()
