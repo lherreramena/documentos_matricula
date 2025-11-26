@@ -81,7 +81,8 @@ def crear_overlay(datos):
     
     # Fecha de Firma (usando el formato del checkbox)
     fecha = datos['firma']['fecha']
-    fecha_str = f"{fecha['dia']} de {fecha['mes']} de {fecha['year']}"
+    # CORRECCIÓN: Usar 'año' en lugar de 'year' para consistencia con el JSON
+    fecha_str = f"{fecha['dia']} de {fecha['mes']} de {fecha['año']}"
     c.drawString(140, 78, fecha_str)
 
     c.save()
@@ -94,19 +95,20 @@ def fusionar_pdf(plantilla_path, overlay_buffer, output_final):
     """
     try:
         # 1. Leer la plantilla
-        contract_src = './assets/docs'
-        contract_template = os.path.join(contract_src, plantilla_path) + ".pdf"
-        with open(contract_template, "rb") as f:
+        with open(PLANTILLA_PDF, "rb") as f:
             reader = PdfReader(f)
             
         # 2. Leer el overlay
-        overlay_reader = PdfReader(overlay_buffer)
+        # CORRECCIÓN para "seek of closed file": Se crea un nuevo BytesIO
+        # a partir del contenido del buffer para asegurar que el stream esté abierto y seekable
+        # para PyPDF2/pypdf.
+        overlay_buffer.seek(0)
+        overlay_reader = PdfReader(io.BytesIO(overlay_buffer.read()))
         
         writer = PdfWriter()
 
         # 3. Fusionar página por página
-        # La plantilla tiene 3 páginas. El overlay tiene una sola página (la que tiene contenido)
-        # y se aplica a las páginas 1 y 3.
+        # La plantilla tiene 3 páginas. El overlay tiene 2 páginas (generadas por 2x c.showPage()).
         
         # Página 1 (Datos de Apoderado y Alumnos)
         base_page_1 = reader.pages[0]
@@ -119,7 +121,10 @@ def fusionar_pdf(plantilla_path, overlay_buffer, output_final):
 
         # Página 3 (Firmas y Fecha)
         base_page_3 = reader.pages[2]
-        overlay_page_3 = overlay_reader.pages[1] # La segunda página del overlay (índice 1)
+        # El overlay generado en memoria tiene 3 páginas (P1 datos, P2 vacía, P3 firma)
+        # El código de ReportLab usa 2 c.showPage(), creando P1, P2(skip), P3.
+        # Por lo tanto, el overlay tiene 3 páginas. La firma está en el índice 2.
+        overlay_page_3 = overlay_reader.pages[2]
         base_page_3.merge_page(overlay_page_3)
         writer.add_page(base_page_3)
 
@@ -131,7 +136,7 @@ def fusionar_pdf(plantilla_path, overlay_buffer, output_final):
         return True
         
     except FileNotFoundError:
-        print(f"\n❌ ERROR: No se encontró el archivo de plantilla: {plantilla_path}")
+        print(f"\n❌ ERROR: No se encontró el archivo de plantilla: {PLANTILLA_PDF}")
         print("Asegúrate de que el PDF 'CONTRATO-MATRICULA-2025-La-Florida.pdf' esté en la misma carpeta.")
         return False
     except Exception as e:
@@ -143,11 +148,8 @@ def generar_contratos():
     Función principal para cargar datos y generar el contrato.
     """
     try:
-        data_src = './assets/json'
-        json_data = os.path.join(data_src, JSON_DATOS)
-        with open(json_data, "r", encoding="utf-8") as f:
-#            contratos = json.load(f)["contratos"]
-#        with open(JSON_DATOS, "r", encoding="utf-8") as f:
+        # Se usa directamente JSON_DATOS, asumiendo que está en la misma carpeta.
+        with open(JSON_DATOS, "r", encoding="utf-8") as f:
             data = json.load(f)
             contratos = data["contratos"]
             
@@ -169,8 +171,9 @@ def generar_contratos():
         overlay_buffer = crear_overlay(datos_contrato)
         
         # 2. Fusionar y guardar
-        if fusionar_pdf(contrac_name, overlay_buffer, output_file):
+        if fusionar_pdf(PLANTILLA_PDF, overlay_buffer, output_file):
             print(f"✅ Contrato PDF completado: {output_file}")
             
 if __name__ == "__main__":
     generar_contratos()
+    

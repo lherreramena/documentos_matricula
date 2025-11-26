@@ -24,7 +24,12 @@
         "firma": {
           "nombre": "Juan Pérez",
           "ci": "12.345.678-9",
-          "fecha": "26 de Noviembre de 2025"
+          "fecha": {
+            "value": "26 de Noviembre de 2025",
+            "dia": 26,
+            "mes": "Noviembre",
+            "year": 2025
+          }
         }
       }
   }
