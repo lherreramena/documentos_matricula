@@ -12,6 +12,33 @@ from utils import mm_a_pixeles
 # Archivos
 PLANTILLA_PDF = "CONTRATO-MATRICULA-2025-La-Florida.pdf"
 JSON_DATOS = "datos_contratos.json"
+COORDENADAS_DATOS = "datos_coordenadas.json"
+
+
+def draw_string_for_dict(datos, coords, c_obj):
+    if isinstance(datos, dict):
+        for key in datos:
+            if key in coords:
+                draw_string_for_dict(datos=datos[key], coords=coords[key], c_obj=c_obj)
+    else:
+        x = coords[0]
+        y = coords[1]
+        c_obj.drawString(x, y, datos)
+
+def crear_overlay_from_dict(datos, coords, output_overlay):
+    """
+    Crea un PDF overlay con los datos del contrato usando reportlab.
+    """
+    c = canvas.Canvas(output_overlay, pagesize=letter)
+
+    # Coordenadas aproximadas (ajustar según el PDF)
+    c.setFont("Helvetica-Bold", 10)
+
+    for key in datos:
+        draw_string_for_dict(datos=datos[key], coords=coords[key], c_obj=c)
+
+    c.save()
+
 
 def crear_overlay(datos, output_overlay):
     """
@@ -87,8 +114,13 @@ def fusionar_pdf(plantilla, overlay, output_final):
 def generar_contratos():
     data_src = './assets/json'
     json_data = os.path.join(data_src, JSON_DATOS)
+    json_coords = os.path.join(data_src, COORDENADAS_DATOS)
+    
     with open(json_data, "r", encoding="utf-8") as f:
         contratos = json.load(f)["contratos"]
+
+    with open(json_coords, "r", encoding="utf-8") as f:
+        coords_dict = json.load(f)
 
     os.makedirs("Contratos_PDF_Completados", exist_ok=True)
 
@@ -99,7 +131,7 @@ def generar_contratos():
         output_file = os.path.join("Contratos_PDF_Completados", output_name)
 
         #crear_overlay(contrato, overlay_file)
-        crear_overlay(contratos[contrac_name], overlay_file)
+        crear_overlay_from_dict(contratos[contrac_name], coords_dict[contrac_name], overlay_file)
         fusionar_pdf(contrac_name, overlay_file, output_file)
 
         logging.info(f"✅ Contrato PDF completado: {output_file}")
