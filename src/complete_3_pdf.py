@@ -1,0 +1,102 @@
+
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+from PyPDF2 import PdfReader, PdfWriter
+import json
+import os
+import logging
+
+from utils import mm_a_pixeles
+
+
+# Archivos
+PLANTILLA_PDF = "CONTRATO-MATRICULA-2025-La-Florida.pdf"
+JSON_DATOS = "datos_contratos.json"
+
+def crear_overlay(datos, output_overlay):
+    """
+    Crea un PDF overlay con los datos del contrato usando reportlab.
+    """
+    c = canvas.Canvas(output_overlay, pagesize=letter)
+
+    # Coordenadas aproximadas (ajustar según el PDF)
+    c.setFont("Helvetica", 10)
+
+    y_offset = mm_a_pixeles(0)
+    logging.debug(f"y_offset= {y_offset}")
+
+    # Coordenadas aproximadas para un PDF tamaño Carta.
+    # Estas coordenadas (x, y) están ajustadas para la plantilla de La Florida.
+    
+    # 1. Fecha en la cabecera (Santiago a [día] de [mes] de 2025)
+    #c.drawString(88, 747, f"{datos['firma']['fecha']['dia']} de {datos['firma']['fecha']['mes']}") 
+    #for offset in range(0,100,10):
+    #    c.drawString(118+offset, 650-offset, f"offset={offset}->{datos['firma']['fecha']['value']}")
+    y_start_date = 630
+    c.drawString(123, y_start_date, datos['firma']['fecha']['value'])
+
+    # Don(ña): / Calidad:
+    y_identity = y_start_date-58
+    y_quality = y_identity - 20
+    x_profesion=160
+    c.drawString(92, y_identity, datos['apoderado']['nombre'])
+    c.drawString(298, y_identity, datos['apoderado']['calidad'])
+    c.drawString(x_profesion, y_quality, datos['apoderado']['profesion'])
+    c.drawString(x_profesion+250, y_quality, datos['apoderado']['rut'])
+    
+    # Domicilio: Calle, N°, Casa, Depto, Comuna
+    dom = datos['apoderado']['domicilio']
+    # La información de domicilio se encuentra dispersa, ajustamos:
+    y_address = y_quality -60
+    x_address = 60
+    c.drawString(60, y_address, dom['calle'])
+    c.drawString(170, y_address, dom['numero']) 
+    c.drawString(200, y_address, dom['casa'])
+    c.drawString(250, y_address, dom['depto'])
+    c.drawString(380, y_address, dom['comuna'])
+
+    c.save()
+
+def fusionar_pdf(plantilla, overlay, output_final):
+    """
+    Fusiona el PDF original con el overlay.
+    """
+    contract_src = './assets/docs'
+    contract_template = os.path.join(contract_src, plantilla) + ".pdf"
+
+    reader = PdfReader(contract_template)
+    overlay_reader = PdfReader(overlay)
+    writer = PdfWriter()
+
+    for i in range(len(reader.pages)):
+        base_page = reader.pages[i]
+        if i < len(overlay_reader.pages):
+            base_page.merge_page(overlay_reader.pages[i])
+        writer.add_page(base_page)
+
+    with open(output_final, "wb") as f:
+        writer.write(f)
+
+def generar_contratos():
+    data_src = './assets/json'
+    json_data = os.path.join(data_src, JSON_DATOS)
+    with open(json_data, "r", encoding="utf-8") as f:
+        contratos = json.load(f)["contratos"]
+
+    os.makedirs("Contratos_PDF_Completados", exist_ok=True)
+
+    for contrac_name in contratos:
+        output_name = contrac_name + "_completado.pdf"
+
+        overlay_file = contrac_name + "_overlay.pdf"
+        output_file = os.path.join("Contratos_PDF_Completados", output_name)
+
+        #crear_overlay(contrato, overlay_file)
+        crear_overlay(contratos[contrac_name], overlay_file)
+        fusionar_pdf(contrac_name, overlay_file, output_file)
+
+        logging.info(f"✅ Contrato PDF completado: {output_file}")
+
+if __name__ == "__main__":
+    logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
+    generar_contratos()
