@@ -55,11 +55,11 @@ def crear_overlay(datos, output_overlay):
     c.drawString(x_address+258, y_address, dom['depto'])
     c.drawString(x_address+322, y_address, dom['comuna'])
 
-    y_alumno = y_profesion - 130
+    y_alumno = y_profesion - 129
     x_alumno = 135
     for alumno in datos['alumnos']:
         c.drawString(x_alumno, y_alumno, alumno['nombre'])
-        c.drawString(x_alumno+280, y_alumno, alumno['curso'])
+        c.drawString(x_alumno+283, y_alumno, alumno['curso'])
         y_alumno -= 25
 
     c.save()
