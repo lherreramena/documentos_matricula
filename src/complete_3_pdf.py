@@ -20,7 +20,7 @@ def crear_overlay(datos, output_overlay):
     c = canvas.Canvas(output_overlay, pagesize=letter)
 
     # Coordenadas aproximadas (ajustar según el PDF)
-    c.setFont("Helvetica", 10)
+    c.setFont("Helvetica-Bold", 10)
 
     y_offset = mm_a_pixeles(0)
     logging.debug(f"y_offset= {y_offset}")
