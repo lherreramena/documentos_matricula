@@ -37,23 +37,30 @@ def crear_overlay(datos, output_overlay):
 
     # Don(ña): / Calidad:
     y_identity = y_start_date-58
-    y_quality = y_identity - 20
-    x_profesion=160
+    y_profesion = y_identity - 23
+    x_profesion=162
     c.drawString(92, y_identity, datos['apoderado']['nombre'])
     c.drawString(298, y_identity, datos['apoderado']['calidad'])
-    c.drawString(x_profesion, y_quality, datos['apoderado']['profesion'])
-    c.drawString(x_profesion+250, y_quality, datos['apoderado']['rut'])
+    c.drawString(x_profesion, y_profesion, datos['apoderado']['profesion'])
+    c.drawString(x_profesion+160, y_profesion, datos['apoderado']['rut'])
     
     # Domicilio: Calle, N°, Casa, Depto, Comuna
     dom = datos['apoderado']['domicilio']
     # La información de domicilio se encuentra dispersa, ajustamos:
-    y_address = y_quality -60
-    x_address = 60
-    c.drawString(60, y_address, dom['calle'])
-    c.drawString(170, y_address, dom['numero']) 
-    c.drawString(200, y_address, dom['casa'])
-    c.drawString(250, y_address, dom['depto'])
-    c.drawString(380, y_address, dom['comuna'])
+    y_address = y_profesion - 23
+    x_address = 48
+    c.drawString(x_address, y_address, dom['calle'])
+    c.drawString(x_address+141, y_address, dom['numero']) 
+    c.drawString(x_address+207, y_address, dom['casa'])
+    c.drawString(x_address+258, y_address, dom['depto'])
+    c.drawString(x_address+322, y_address, dom['comuna'])
+
+    y_alumno = y_profesion - 130
+    x_alumno = 135
+    for alumno in datos['alumnos']:
+        c.drawString(x_alumno, y_alumno, alumno['nombre'])
+        c.drawString(x_alumno+280, y_alumno, alumno['curso'])
+        y_alumno -= 25
 
     c.save()
 
