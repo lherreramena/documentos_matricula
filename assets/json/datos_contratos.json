@@ -31,6 +31,98 @@
             "year": 2025
           }
         }
+      },
+    "COMPROBANTE-CHEQUES-2025": {
+      "Alumnos": "",
+      "cursos": "",
+      "numero_cheques": 0,
+      "total_pesos": 0,
+      "Banco": "",
+      "numero_cuenta": "",
+      "titular_cuents": "",
+      "rut": "",
+      "telefono": "",
+      "correo": "",
+      "cheques": {
+        "marzo": {
+          "monto": 0,
+          "fecha": "1/03/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "abril": {
+          "monto": 0,
+          "fecha": "1/04/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "mayo": {
+          "monto": 0,
+          "fecha": "1/05/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "junio": {
+          "monto": 0,
+          "fecha": "1/06/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "julio": {
+          "monto": 0,
+          "fecha": "1/07/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "agosto": {
+          "monto": 0,
+          "fecha": "1/08/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "septiembre": {
+          "monto": 0,
+          "fecha": "1/09/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "octubre": {
+          "monto": 0,
+          "fecha": "1/10/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "noviembre": {
+          "monto": 0,
+          "fecha": "1/11/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "diciembre": {
+          "monto": 0,
+          "fecha": "1/12/2026",
+          "numero_cheque": "",
+          "observaciones": ""
+        },
+        "enero": {
+          "monto": 0,
+          "fecha": "1/1/2027",
+          "numero_cheque": "",
+          "observaciones": ""
+        }
       }
+    },
+    "COMPROBANTE-DE-MATRICULA-2025": {
+
+    },
+    "FICHA-DE-MATRICULA-2025-La-Florida-1": {
+
+    },
+    "FICHA-DE-SALUD-2025-La-Florida-1.pdf": {
+
+    },
+    "Sobre-el-Centro-General-de-Padres-y-Apoderados-1": {
+
+    }
   }
 }
