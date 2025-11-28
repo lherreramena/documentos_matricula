@@ -20,6 +20,9 @@ def draw_string_for_dict(datos, coords, c_obj):
         for key in datos:
             if key in coords:
                 draw_string_for_dict(datos=datos[key], coords=coords[key], c_obj=c_obj)
+    elif isinstance(datos, list):
+        for i, item in enumerate(datos):
+            draw_string_for_dict(datos=item, coords=coords[i], c_obj=c_obj)
     else:
         x = coords[0]
         y = coords[1]
