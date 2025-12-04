@@ -24,12 +24,12 @@ def draw_string_for_dict(datos, coords, c_obj):
         for i, item in enumerate(datos):
             draw_string_for_dict(datos=item, coords=coords[i], c_obj=c_obj)
     else:
-        if len(coords) != 2:
-            logging.warning(f"Coordenadas inválidas: {coords} para dato: {datos}")
-        else:
+        if len(coords) == 2:
             x = coords[0]
             y = coords[1]
             c_obj.drawString(x, y, datos)
+        #else:
+            #logging.warning(f"Coordenadas inválidas: {coords} para dato: {datos}")
 
 def crear_overlay_from_dict(datos, coords, output_overlay):
     """

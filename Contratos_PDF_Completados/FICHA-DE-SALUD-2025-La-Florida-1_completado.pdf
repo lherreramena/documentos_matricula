@@ -29,14 +29,14 @@ endobj
 /F2 14 0 R
 /F3 22 0 R
 /F4 30 0 R
-/F1e5cc836f-8dc7-4e16-a89d-9d86ce1d67a6 <<
+/F1fef84be1-accf-496e-9af3-c47e993f7415 <<
 /BaseFont /Helvetica
 /Encoding /WinAnsiEncoding
 /Name /F1
 /Subtype /Type1
 /Type /Font
 >>
-/F230cb9146-50ec-44de-8517-6afb9a3f5217 <<
+/F2b37e2959-44fc-4e1e-a7ae-68daaa5ad44f <<
 /BaseFont /Helvetica-Bold
 /Encoding /WinAnsiEncoding
 /Name /F2
@@ -44,7 +44,7 @@ endobj
 /Type /Font
 >>
 >>
-/ProcSet [ /ImageB /Text /ImageI /PDF /ImageC ]
+/ProcSet [ /ImageI /ImageB /ImageC /PDF /Text ]
 >>
 /Rotate 0
 /Type /Page
@@ -2128,11 +2128,11 @@ W
 n
 1 0 0 1 0 0 cm
 BT
-/F1e5cc836f-8dc7-4e16-a89d-9d86ce1d67a6 12 Tf
+/F1fef84be1-accf-496e-9af3-c47e993f7415 12 Tf
 14.4 TL
 ET
 BT
-/F230cb9146-50ec-44de-8517-6afb9a3f5217 10 Tf
+/F2b37e2959-44fc-4e1e-a7ae-68daaa5ad44f 10 Tf
 12 TL
 ET
 Q
