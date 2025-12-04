@@ -1,27 +1,29 @@
 {
     "CONTRATO-MATRICULA-2025-La-Florida":
     {
-        "firma": {
-            "fecha": {
-                "value": [123, 630]
-            }
-        },
-        "apoderado": {
-            "nombre": [92, 572],
-            "calidad": [298, 572],
-            "profesion": [162, 549],
-            "rut": [322, 549],
-            "domicilio": {
-                "calle": [48, 526],
-                "numero": [189, 526],
-                "casa": [255, 526],
-                "depto": [306, 526],
-                "comuna": [370, 526]
-            }
-        },
-        "alumnos": [
-            {"nombre": [135, 420], "curso": [418, 420]},
-            {"nombre": [135, 395], "curso": [418, 395]}
-        ]
+        "hoja_1": {
+            "firma": {
+                "fecha": {
+                    "value": [123, 630]
+                }
+            },
+            "apoderado": {
+                "nombre": [92, 572],
+                "calidad": [298, 572],
+                "profesion": [162, 549],
+                "rut": [322, 549],
+                "domicilio": {
+                    "calle": [48, 526],
+                    "numero": [189, 526],
+                    "casa": [255, 526],
+                    "depto": [306, 526],
+                    "comuna": [370, 526]
+                }
+            },
+            "alumnos": [
+                {"nombre": [135, 420], "curso": [418, 420]},
+                {"nombre": [135, 395], "curso": [418, 395]}
+            ]
+        }
     }
 }
