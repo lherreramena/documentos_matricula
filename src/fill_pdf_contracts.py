@@ -109,6 +109,7 @@ def fusionar_pdf(plantilla, overlay, output_final):
     contract_src = './assets/docs'
     contract_template = os.path.join(contract_src, plantilla) + ".pdf"
 
+    logging.info(f"Fusionando {contract_template} + {overlay} -> {output_final}")
     reader = PdfReader(contract_template)
     overlay_reader = PdfReader(overlay)
     writer = PdfWriter()
