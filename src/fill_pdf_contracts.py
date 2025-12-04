@@ -24,9 +24,12 @@ def draw_string_for_dict(datos, coords, c_obj):
         for i, item in enumerate(datos):
             draw_string_for_dict(datos=item, coords=coords[i], c_obj=c_obj)
     else:
-        x = coords[0]
-        y = coords[1]
-        c_obj.drawString(x, y, datos)
+        if len(coords) != 2:
+            logging.warning(f"Coordenadas inválidas: {coords} para dato: {datos}")
+        else:
+            x = coords[0]
+            y = coords[1]
+            c_obj.drawString(x, y, datos)
 
 def crear_overlay_from_dict(datos, coords, output_overlay):
     """
@@ -128,7 +131,7 @@ def generar_contratos():
         contratos = json.load(f)["contratos"]
 
     with open(json_coords, "r", encoding="utf-8") as f:
-        coords_dict = json.load(f)
+        coords_dict = json.load(f)["coordenadas"]
 
     os.makedirs("Contratos_PDF_Completados", exist_ok=True)
 
