@@ -1,29 +1,175 @@
 {
-    "CONTRATO-MATRICULA-2025-La-Florida":
-    {
-        "hoja_1": {
-            "firma": {
-                "fecha": {
-                    "value": [123, 630]
-                }
-            },
-            "apoderado": {
-                "nombre": [92, 572],
-                "calidad": [298, 572],
-                "profesion": [162, 549],
-                "rut": [322, 549],
-                "domicilio": {
-                    "calle": [48, 526],
-                    "numero": [189, 526],
-                    "casa": [255, 526],
-                    "depto": [306, 526],
-                    "comuna": [370, 526]
-                }
-            },
-            "alumnos": [
-                {"nombre": [135, 420], "curso": [418, 420]},
-                {"nombre": [135, 395], "curso": [418, 395]}
-            ]
+  "contratos": {
+    "CONTRATO-MATRICULA-2025-La-Florida": {
+      "hoja_1": {
+        "apoderado": {
+          "nombre": [92, 572],
+          "calidad": [298, 572],
+          "profesion": [162, 549],
+          "rut": [322, 549],
+          "domicilio": {
+            "calle": [48, 526],
+            "numero": [189, 526],
+            "casa": [255, 526],
+            "depto": [306, 526],
+            "comuna": [370, 526]
+          }
+        },
+        "alumnos": [
+          { "nombre": [135, 420], "curso": [418, 420] },
+          { "nombre": [135, 395], "curso": [418, 395] }
+        ],
+        "firma": {
+          "nombre": [],
+          "ci": [],
+          "fecha": [123, 630]
         }
+      }
+    },
+    "COMPROBANTE-CHEQUES-2025": {
+      "hoja_1": {
+        "Alumnos": [],
+        "cursos": [],
+        "numero_cheques": [],
+        "total_pesos": [],
+        "Banco": [],
+        "numero_cuenta": [],
+        "titular_cuenta": [],
+        "rut": [],
+        "telefono": [],
+        "correo": [],
+        "nombre_padre_madre_tutor": [],
+        "cheques": {
+          "marzo": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "abril": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "mayo": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "junio": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "julio": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "agosto": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "septiembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "octubre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "noviembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "diciembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "enero": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] }
+        }
+      }
+    },
+    "COMPROBANTE-DE-MATRICULA-2025": {
+      "hoja_1": {
+        "alumnos": [
+          { "nombre": [], "curso": [] },
+          { "nombre": [], "curso": [] }
+        ],
+        "nombre_apoderado": [],
+        "fecha": []
+      }
+    },
+    "FICHA-DE-MATRICULA-2025-La-Florida-1": {
+      "hoja_1": {
+        "datos_estudiante": {
+          "nombre_completo": [],
+          "fecha_nacimiento": [],
+          "rut": [],
+          "edad": [],
+          "direccion": [],
+          "comuna": [],
+          "curso": [],
+          "telefono": [],
+          "procedencia": [],
+          "responsable_nombre": [],
+          "responsable_rut": [],
+          "responsable_relacion": [],
+          "responsable_correo": [],
+          "responsable_celular": [],
+          "responsable_profesion": [],
+          "responsable_trabajo": [],
+          "responsable_tel_trabajo": []
+        }
+      }
+    },
+    "FICHA-DE-SALUD-2025-La-Florida-1.pdf": {
+      "hoja_1": {}
+    },
+    "FICHA-DE-SALUD-2026-La-Florida-1": {
+      "hoja_1": {
+        "datos_estudiante": {
+          "nombre_completo": [],
+          "rut": [],
+          "fecha_nacimiento": [],
+          "curso_nivel": [],
+          "domicilio": [],
+          "telefono_contacto": []
+        },
+        "datos_apoderado": {
+          "nombre_completo": [],
+          "relacion_estudiante": [],
+          "telefono_contacto": [],
+          "correo_electronico": []
+        },
+        "informacion_medica": {
+          "procesos_inflamatorios_infecciones": [],
+          "alergia": [],
+          "disminucion_agudeza_visual": [],
+          "hipoacusia": [],
+          "convulsiones": [],
+          "dificultades_osteo_articulares": [],
+          "dificultades_neuromusculares": [],
+          "diabetes": [],
+          "cardiopatias": [],
+          "asma": [],
+          "otras_enfermedades": [],
+          "fracturas": [],
+          "esguinces_luxaciones": [],
+          "otras_recientes": [],
+          "intervenciones_quirurgicas": [],
+          "situacion_medica_particular": []
+        },
+        "seguro_salud": {
+          "tiene_seguro_privado": [],
+          "centro_convenio": [],
+          "centro_emergencia": [],
+          "cobertura": []
+        },
+        "certificacion": {
+          "curso": [],
+          "autorizacion_educacion_fisica": []
+        },
+        "firma_apoderado": {
+          "firma": [],
+          "rut": [],
+          "fecha": []
+        }
+      }
+    },
+    "Sobre-el-Centro-General-de-Padres-y-Apoderados-2026-La-Florida": {
+      "hoja_1": {
+        "cuota": {
+          "monto": [],
+          "forma_pago": {
+            "cheque": [],
+            "efectivo": [],
+            "transferencia": []
+          }
+        },
+        "comprobante_pago": {
+          "alumnos": [],
+          "cursos": [],
+          "detalle_cheque": {
+            "nombre_titular": [],
+            "rut": [],
+            "banco": [],
+            "numero_cuenta": [],
+            "numero_cheque": []
+          }
+        },
+        "firma": {
+          "nombre_padre_madre_tutor": [],
+          "firma": [],
+          "fecha": [],
+          "recibido_colegio": [],
+          "firma_timbre": []
+        }
+      }
     }
+  }
 }
