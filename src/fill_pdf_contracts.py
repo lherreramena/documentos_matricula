@@ -37,8 +37,13 @@ def crear_overlay_from_dict(datos, coords, output_overlay):
     # Coordenadas aproximadas (ajustar según el PDF)
     c.setFont("Helvetica-Bold", 10)
 
-    for key in datos:
-        draw_string_for_dict(datos=datos[key], coords=coords[key], c_obj=c)
+    for hoja in datos:
+        #c.showPage()
+        logging.debug(f"Hoja: {hoja}")
+        datos_hoja = datos[hoja]
+        coords_hoja = coords[hoja]
+        for key in datos_hoja:
+            draw_string_for_dict(datos=datos_hoja[key], coords=coords_hoja[key], c_obj=c)
 
     c.save()
 
