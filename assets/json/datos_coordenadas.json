@@ -153,17 +153,29 @@
           },
           "datos_emergencia": {
             "prioridad_1": {
-              "nombre": [130,420],
-              "relacion": [370,420],
-              "telefono": [250,420],
-              "celular": [450,420]
+              "nombre": [130,185],
+              "relacion": [370,185],
+              "telefono": [250,185],
+              "celular": [450,185]
             },
             "prioridad_2": {
-              "nombre": [130,420],
-              "relacion": [370,420],
-              "telefono": [250,420],
-              "celular": [450,420]
-          }
+              "nombre": [130,164],
+              "relacion": [370,164],
+              "telefono": [250,164],
+              "celular": [450,164]
+            },
+            "prioridad_3": {
+              "nombre": [130,143],
+              "relacion": [370,143],
+              "telefono": [250,143],
+              "celular": [450,143]
+            },
+            "prioridad_4": {
+              "nombre": [130,122],
+              "relacion": [370,122],
+              "telefono": [250,122],
+              "celular": [450,122]
+            }
         }
       },
       "hoja_2": {

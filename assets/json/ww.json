@@ -1,0 +1,88 @@
+{
+  "coordenadas": {
+    "FICHA-DE-MATRICULA-2026-La-Florida": {
+      "hoja_1": {
+        "datos_estudiante": {
+          "nombre_completo": [650, 600],
+          "fecha_nacimiento": [700, 600],
+          "rut": [700, 550],
+          "edad": [650, 550],
+          "direccion": [600, 500],
+          "numero": [600, 450],
+          "casa": [600, 450],
+          "depto": [600, 450],
+          "comuna": [550, 450],
+          "curso": [500, 400],
+          "telefono": [450, 350],
+          "procedencia": [400, 300],
+          "algun_diagnostico": [350, 250],
+          "personas_con_quien_vive": [300, 200],
+          "datos_emergencia": {
+            "prioridad_1": {
+              "nombre": [200, 150],
+              "relacion": [200, 150],
+              "telefono": [200, 150],
+              "celular": [200, 150]
+            },
+            "prioridad_2": {
+              "nombre": [200, 100],
+              "relacion": [200, 100],
+              "telefono": [200, 100],
+              "celular": [200, 100]
+            },
+            "prioridad_3": {
+              "nombre": [200, 50],
+              "relacion": [200, 50],
+              "telefono": [200, 50],
+              "celular": [200, 50]
+            },
+            "prioridad_4": {
+              "nombre": [200, 0],
+              "relacion": [200, 0],
+              "telefono": [200, 0],
+              "celular": [200, 0]
+            }
+          }
+        },
+        "datos_responsable": {
+          "responsable_nombre": [650, 600],
+          "responsable_rut": [600, 550],
+          "responsable_relacion": [550, 500],
+          "responsable_correo": [500, 450],
+          "responsable_celular": [450, 400],
+          "responsable_profesion": [400, 350],
+          "responsable_trabajo": [350, 300],
+          "responsable_tel_trabajo": [300, 250],
+          "responsable_direccion": [250, 200]
+        },
+        "segundo_progenitor": {
+          "nombre_completo": [350, 600],
+          "rut": [300, 550],
+          "relacion": [250, 500],
+          "profesion": [200, 450],
+          "trabajo": [150, 400],
+          "telefono_trabajo": [100, 350],
+          "celular": [50, 300],
+          "correo": [0, 250],
+          "direccion": [0, 200]
+        },
+        "apoderado": {
+          "nombre_completo": [700, 600],
+          "rut": [650, 550],
+          "relacion": [600, 500],
+          "celular": [550, 450],
+          "correo": [500, 400],
+          "profesion": [450, 350],
+          "trabajo": [400, 300],
+          "telefono_trabajo": [350, 250],
+          "direccion": [300, 200]
+        },
+        "declaracion": {
+          "nombre_completo": [200, 150],
+          "firma_rut": [150, 100],
+          "fecha": [100, 50]
+        }
+      }
+    }
+  }
+}
