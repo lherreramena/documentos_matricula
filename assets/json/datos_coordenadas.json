@@ -271,30 +271,30 @@
     "Sobre-el-Centro-General-de-Padres-y-Apoderados-2026-La-Florida": {
       "hoja_1": {
         "cuota": {
-          "monto": [],
+          "monto": [200, 560],
           "forma_pago": {
-            "cheque": [],
-            "efectivo": [],
-            "transferencia": []
+            "cheque": [205, 477],
+            "efectivo": [290, 477],
+            "transferencia": [400, 477]
           }
         },
         "comprobante_pago": {
-          "alumnos": [],
-          "cursos": [],
+          "alumnos": [200, 540],
+          "cursos": [450, 540],
           "detalle_cheque": {
-            "nombre_titular": [],
-            "rut": [],
-            "banco": [],
-            "numero_cuenta": [],
-            "numero_cheque": []
+            "nombre_titular": [200, 465],
+            "rut": [400, 465],
+            "banco": [200, 440],
+            "numero_cuenta": [350, 440],
+            "numero_cheque": [500, 440]
           }
         },
         "firma": {
-          "nombre_padre_madre_tutor": [],
-          "firma": [],
-          "fecha": [],
-          "recibido_colegio": [],
-          "firma_timbre": []
+          "nombre_padre_madre_tutor": [150, 280],
+          "firma": [150, 310],
+          "fecha": [400, 200],
+          "recibido_colegio": [400, 250],
+          "firma_timbre": [400, 310]
         }
       }
     }
