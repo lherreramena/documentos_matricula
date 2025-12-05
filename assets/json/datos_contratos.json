@@ -90,6 +90,34 @@
         }
       }
     },
+    "COMPROBANTE-CHEQUES-2026": {
+      "hoja_1": {
+        "Alumnos": "",
+        "cursos": "",
+        "numero_cheques": 0,
+        "total_pesos": 0,
+        "Banco": "",
+        "numero_cuenta": "",
+        "titular_cuenta": "",
+        "rut": "",
+        "telefono": "",
+        "correo": "",
+        "nombre_padre_madre_tutor": "",
+        "cheques": {
+          "marzo": { "monto": 0, "fecha": "1/03/2026", "numero_cheque": "", "observaciones": "" },
+          "abril": { "monto": 0, "fecha": "1/04/2026", "numero_cheque": "", "observaciones": "" },
+          "mayo": { "monto": 0, "fecha": "1/05/2026", "numero_cheque": "", "observaciones": "" },
+          "junio": { "monto": 0, "fecha": "1/06/2026", "numero_cheque": "", "observaciones": "" },
+          "julio": { "monto": 0, "fecha": "1/07/2026", "numero_cheque": "", "observaciones": "" },
+          "agosto": { "monto": 0, "fecha": "1/08/2026", "numero_cheque": "", "observaciones": "" },
+          "septiembre": { "monto": 0, "fecha": "1/09/2026", "numero_cheque": "", "observaciones": "" },
+          "octubre": { "monto": 0, "fecha": "1/10/2026", "numero_cheque": "", "observaciones": "" },
+          "noviembre": { "monto": 0, "fecha": "1/11/2026", "numero_cheque": "", "observaciones": "" },
+          "diciembre": { "monto": 0, "fecha": "1/12/2026", "numero_cheque": "", "observaciones": "" },
+          "enero": { "monto": 0, "fecha": "1/1/2027", "numero_cheque": "", "observaciones": "" }
+        }
+      }
+    },
     "COMPROBANTE-DE-MATRICULA-2025": {
       "hoja_1": {
         "alumnos": [
@@ -100,7 +128,40 @@
         "fecha": ""
       }
     },
+    "COMPROBANTE-DE-MATRICULA-2026": {
+      "hoja_1": {
+        "alumnos": [
+          { "nombre": "Pedro Pérez", "curso": "3° Básico" },
+          { "nombre": "María Pérez", "curso": "1° Medio" }
+        ],
+        "nombre_apoderado": "",
+        "fecha": ""
+      }
+    },
     "FICHA-DE-MATRICULA-2025-La-Florida-1": {
+      "hoja_1": {
+        "datos_estudiante": {
+          "nombre_completo": "Juan Pérez Soto",
+          "fecha_nacimiento": "15/03/2015",
+          "rut": "22.345.678-9",
+          "edad": "10",
+          "direccion": "Av. Los Álamos 1234",
+          "comuna": "La Florida",
+          "curso": "5° Básico",
+          "telefono": "987654321",
+          "procedencia": "Jardín Infantil Los Pinos",
+          "responsable_nombre": "María Soto",
+          "responsable_rut": "12.345.678-5",
+          "responsable_relacion": "Madre",
+          "responsable_correo": "maria.soto@gmail.com",
+          "responsable_celular": "912345678",
+          "responsable_profesion": "Ingeniera",
+          "responsable_trabajo": "Empresa ABC",
+          "responsable_tel_trabajo": "22334455"
+        }
+      }
+    },
+    "FICHA-DE-MATRICULA-2026-La-Florida": {
       "hoja_1": {
         "datos_estudiante": {
           "nombre_completo": "Juan Pérez Soto",

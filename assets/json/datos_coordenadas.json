@@ -80,6 +80,34 @@
         }
       }
     },
+    "COMPROBANTE-CHEQUES-2026": {
+      "hoja_1": {
+        "Alumnos": [],
+        "cursos": [],
+        "numero_cheques": [],
+        "total_pesos": [],
+        "Banco": [],
+        "numero_cuenta": [],
+        "titular_cuenta": [],
+        "rut": [],
+        "telefono": [],
+        "correo": [],
+        "nombre_padre_madre_tutor": [],
+        "cheques": {
+          "marzo": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "abril": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "mayo": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "junio": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "julio": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "agosto": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "septiembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "octubre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "noviembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "diciembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
+          "enero": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] }
+        }
+      }
+    },
     "COMPROBANTE-DE-MATRICULA-2025": {
       "hoja_1": {
         "alumnos": [
@@ -90,7 +118,40 @@
         "fecha": []
       }
     },
+    "COMPROBANTE-DE-MATRICULA-2026": {
+      "hoja_1": {
+        "alumnos": [
+          { "nombre": [], "curso": [] },
+          { "nombre": [], "curso": [] }
+        ],
+        "nombre_apoderado": [],
+        "fecha": []
+      }
+    },
     "FICHA-DE-MATRICULA-2025-La-Florida-1": {
+      "hoja_1": {
+        "datos_estudiante": {
+          "nombre_completo": [],
+          "fecha_nacimiento": [],
+          "rut": [],
+          "edad": [],
+          "direccion": [],
+          "comuna": [],
+          "curso": [],
+          "telefono": [],
+          "procedencia": [],
+          "responsable_nombre": [],
+          "responsable_rut": [],
+          "responsable_relacion": [],
+          "responsable_correo": [],
+          "responsable_celular": [],
+          "responsable_profesion": [],
+          "responsable_trabajo": [],
+          "responsable_tel_trabajo": []
+        }
+      }
+    },
+    "FICHA-DE-MATRICULA-2026-La-Florida": {
       "hoja_1": {
         "datos_estudiante": {
           "nombre_completo": [],
