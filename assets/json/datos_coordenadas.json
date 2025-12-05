@@ -149,7 +149,7 @@
           "algun_diagnostico": [130,455],
           "personas_con_quien_vive": {
             "nombre": [130,438],
-            "relación": [250,438],
+            "relación": [250,438]
           },
           "datos_emergencia": {
             "prioridad_1": {
@@ -176,6 +176,7 @@
               "telefono": [250,122],
               "celular": [450,122]
             }
+        }
         }
       },
       "hoja_2": {
