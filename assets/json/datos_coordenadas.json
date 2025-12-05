@@ -121,8 +121,11 @@
     "COMPROBANTE-DE-MATRICULA-2026-La-Florida": {
       "hoja_1": {
         "alumnos": [
-          { "nombre": [], "curso": [] },
-          { "nombre": [], "curso": [] }
+          { "nombre": [70,778], "curso": [] },
+          { "nombre": [70,755], "curso": [] },
+          { "nombre": [70,732], "curso": [] },
+          { "nombre": [70,709], "curso": [] },
+          { "nombre": [70,686], "curso": [] }
         ],
         "nombre_apoderado": [],
         "fecha": []
@@ -131,15 +134,40 @@
     "FICHA-DE-MATRICULA-2025-La-Florida-1": {
       "hoja_1": {
         "datos_estudiante": {
-          "nombre_completo": [],
-          "fecha_nacimiento": [],
-          "rut": [],
-          "edad": [],
-          "direccion": [],
-          "comuna": [],
-          "curso": [],
-          "telefono": [],
-          "procedencia": [],
+          "nombre_completo": [82,618],
+          "fecha_nacimiento": [183,599],
+          "rut": [272,599],
+          "edad": [440,599],
+          "direccion": [138,581],
+          "numero": [320,581],
+          "casa":[110,565],
+          "depto": [183,565],
+          "comuna": [325,565],
+          "curso": [238,548],
+          "telefono": [390,548],
+          "procedencia": [320,530],
+          "algun_diagnostico": [130,455],
+          "personas_con_quien_vive": {
+            "nombre": [130,438],
+            "relación": [250,438],
+          },
+          "datos_emergencia": {
+            "prioridad_1": {
+              "nombre": [130,420],
+              "relacion": [370,420],
+              "telefono": [250,420],
+              "celular": [450,420]
+            },
+            "prioridad_2": {
+              "nombre": [130,420],
+              "relacion": [370,420],
+              "telefono": [250,420],
+              "celular": [450,420]
+          }
+        }
+      },
+      "hoja_2": {
+        "datos_responsable": {
           "responsable_nombre": [],
           "responsable_rut": [],
           "responsable_relacion": [],
