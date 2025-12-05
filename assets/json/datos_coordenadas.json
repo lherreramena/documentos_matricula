@@ -82,29 +82,29 @@
     },
     "COMPROBANTE-CHEQUES-2026": {
       "hoja_1": {
-        "Alumnos": [],
-        "cursos": [],
-        "numero_cheques": [],
-        "total_pesos": [],
-        "Banco": [],
-        "numero_cuenta": [],
-        "titular_cuenta": [],
-        "rut": [],
-        "telefono": [],
-        "correo": [],
-        "nombre_padre_madre_tutor": [],
+        "Alumnos": [135,792],
+        "cursos": [382,764],
+        "numero_cheques": [148,741],
+        "total_pesos": [300,741],
+        "Banco": [270,690],
+        "numero_cuenta": [150,665],
+        "titular_cuenta": [240,640],
+        "rut": [78,613],
+        "telefono": [260,613],
+        "correo": [90,589],
+        "nombre_padre_madre_tutor": [120,173],
         "cheques": {
-          "marzo": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "abril": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "mayo": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "junio": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "julio": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "agosto": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "septiembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "octubre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "noviembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "diciembre": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] },
-          "enero": { "monto": [], "fecha": [], "numero_cheque": [], "observaciones": [] }
+          "marzo": { "monto": [130,522], "fecha": [210,522], "numero_cheque": [290,522], "observaciones": [395,522] },
+          "abril": { "monto": [130,508], "fecha": [210,508], "numero_cheque": [290,508], "observaciones": [395,508] },
+          "mayo": { "monto": [130,495], "fecha": [210,495], "numero_cheque": [290,495], "observaciones": [395,495] },
+          "junio": { "monto": [130,482], "fecha": [210,482], "numero_cheque": [290,482], "observaciones": [395,482] },
+          "julio": { "monto": [130,469], "fecha": [210,469], "numero_cheque": [290,469], "observaciones": [395,469] },
+          "agosto": { "monto": [130,456], "fecha": [210,456], "numero_cheque": [290,456], "observaciones": [395,456] },
+          "septiembre": { "monto": [130,443], "fecha": [210,443], "numero_cheque": [290,443], "observaciones": [395,443] },
+          "octubre": { "monto": [130,430], "fecha": [210,430], "numero_cheque": [290,430], "observaciones": [395,430] },
+          "noviembre": { "monto": [130,417], "fecha": [210,417], "numero_cheque": [290,417], "observaciones": [395,417] },
+          "diciembre": { "monto": [130,404], "fecha": [210,404], "numero_cheque": [290,404], "observaciones": [395,404] },
+          "enero": { "monto": [130,391], "fecha": [210,391], "numero_cheque": [290,391], "observaciones": [395,391] }
         }
       }
     },
@@ -118,7 +118,7 @@
         "fecha": []
       }
     },
-    "COMPROBANTE-DE-MATRICULA-2026": {
+    "COMPROBANTE-DE-MATRICULA-2026-La-Florida": {
       "hoja_1": {
         "alumnos": [
           { "nombre": [], "curso": [] },
