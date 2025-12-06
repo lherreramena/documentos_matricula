@@ -127,8 +127,8 @@
           { "nombre": [70,709], "curso": [] },
           { "nombre": [70,686], "curso": [] }
         ],
-        "nombre_apoderado": [],
-        "fecha": []
+        "nombre_apoderado": [150, 332],
+        "fecha": [430, 332]
       }
     },
     "FICHA-DE-MATRICULA-2025-La-Florida-1": {
@@ -195,15 +195,53 @@
     "FICHA-DE-MATRICULA-2026-La-Florida": {
       "hoja_1": {
         "datos_estudiante": {
-          "nombre_completo": [],
-          "fecha_nacimiento": [],
-          "rut": [],
-          "edad": [],
-          "direccion": [],
-          "comuna": [],
-          "curso": [],
-          "telefono": [],
-          "procedencia": [],
+          "nombre_completo": [82,618],
+          "fecha_nacimiento": [183,599],
+          "rut": [272,599],
+          "edad": [440,599],
+          "direccion": [138,581],
+          "numero": [320,581],
+          "casa":[110,565],
+          "depto": [183,565],
+          "comuna": [325,565],
+          "curso": [238,548],
+          "telefono": [390,548],
+          "procedencia": [320,530],
+          "algun_diagnostico": [130,455],
+          "personas_con_quien_vive": {
+            "nombre": [130,438],
+            "relación": [250,438]
+          },
+          "datos_emergencia": {
+            "prioridad_1": {
+              "nombre": [130,185],
+              "relacion": [370,185],
+              "telefono": [250,185],
+              "celular": [450,185]
+            },
+            "prioridad_2": {
+              "nombre": [130,164],
+              "relacion": [370,164],
+              "telefono": [250,164],
+              "celular": [450,164]
+            },
+            "prioridad_3": {
+              "nombre": [130,143],
+              "relacion": [370,143],
+              "telefono": [250,143],
+              "celular": [450,143]
+            },
+            "prioridad_4": {
+              "nombre": [130,122],
+              "relacion": [370,122],
+              "telefono": [250,122],
+              "celular": [450,122]
+            }
+        }
+        }
+      },
+      "hoja_2": {
+        "datos_responsable": {
           "responsable_nombre": [],
           "responsable_rut": [],
           "responsable_relacion": [],
@@ -280,22 +318,19 @@
           }
         },
         "comprobante_pago": {
-          "alumnos": [200, 540],
-          "cursos": [450, 540],
+          "alumnos": [200, 500],
+          "cursos": [382, 454],
           "detalle_cheque": {
-            "nombre_titular": [200, 465],
-            "rut": [400, 465],
-            "banco": [200, 440],
-            "numero_cuenta": [350, 440],
-            "numero_cheque": [500, 440]
+            "nombre_titular": [135, 378],
+            "rut": [350, 378],
+            "banco": [95, 314],
+            "numero_cuenta": [285, 314],
+            "numero_cheque": [450, 314]
           }
         },
         "firma": {
-          "nombre_padre_madre_tutor": [150, 280],
-          "firma": [150, 310],
-          "fecha": [400, 200],
-          "recibido_colegio": [400, 250],
-          "firma_timbre": [400, 310]
+          "nombre_padre_madre_tutor": [60, 252],
+          "fecha": [100, 118],
         }
       }
     }
