@@ -208,10 +208,23 @@
           "telefono": [390,548],
           "procedencia": [320,530],
           "algun_diagnostico": [130,455],
-          "personas_con_quien_vive": {
-            "nombre": [130,438],
-            "relación": [250,438]
+          "personas_con_quien_vive": [{
+            "nombre": [135,378],
+            "relación": [330,378]
           },
+          {
+            "nombre": [135,359],
+            "relación": [330,359]
+          },
+          {
+            "nombre": [135,340],
+            "relación": [330,340]
+          },
+          {
+            "nombre": [135,320],
+            "relación": [330,320]
+          }
+        ],
           "datos_emergencia": {
             "prioridad_1": {
               "nombre": [130,185],
@@ -242,9 +255,11 @@
       },
       "hoja_2": {
         "datos_responsable": {
-          "responsable_nombre": [],
-          "responsable_rut": [],
-          "responsable_relacion": [],
+          "responsable_nombre_completo": [190,558],
+          "responsable_rut": [112,540],
+          "responsable_relacion_madre": [355,525],
+          "responsable_relacion_padre": [395,525],
+          "responsable_relacion_tutor": [465,525],
           "responsable_correo": [],
           "responsable_celular": [],
           "responsable_profesion": [],
