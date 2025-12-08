@@ -255,18 +255,52 @@
       },
       "hoja_2": {
         "datos_responsable": {
-          "responsable_nombre_completo": [190,558],
-          "responsable_rut": [112,540],
-          "responsable_relacion_madre": [355,525],
-          "responsable_relacion_padre": [395,525],
-          "responsable_relacion_tutor": [465,525],
-          "responsable_correo": [],
-          "responsable_celular": [],
-          "responsable_profesion": [],
-          "responsable_trabajo": [],
-          "responsable_tel_trabajo": []
+          "nombre_completo": [190,558],
+          "rut": [112,540],
+          "relacion_madre": [355,525],
+          "relacion_padre": [395,525],
+          "relacion_tutor": [465,525],
+          "correo": [450,505],
+          "celular": [145,488],
+          "profesion": [260,470],
+          "lugar_trabajo": [210,455],
+          "tel_trabajo": [320,438],
+          "direccion": [320,420]
+        },
+        "datos_segundo_progenitor": {
+          "nombre_completo": [190,355],
+          "rut": [112,340],
+          "relacion_madre": [390,340],
+          "relacion_padre": [430,340],
+          "profesion": [260,320],
+          "lugar_trabajo": [210,304],
+          "tel_trabajo": [205,287],
+          "celular": [130,270],
+          "correo": [335,270],
+          "direccion": [320,253]
         }
-      }
+      },
+      "hoja_3": {
+        "apoderado": {
+          "nombre_completo": [185,624],
+          "rut": [112,598],
+          "relacion_con_alumno": [260,580],
+          "celular": [130,513],
+          "correo": [335,513],
+          "profesion": [260,547],
+          "lugar_trabajo": [180,528],
+          "tel_trabajo": [430,528],
+          "direccion": [140,510],
+          "comuna": [310,510],
+          "fecha": [330,476]
+        },
+        "firma": {
+          "nombre_completo": [100,154],
+          "rut": [400,154],
+          "padre": [130,120],
+          "madre": [173,120],
+          "tutor": [240,120]
+        }
     },
     "FICHA-DE-SALUD-2025-La-Florida-1": {
       "hoja_1": {}
