@@ -209,22 +209,22 @@
           "procedencia": [320,530],
           "algun_diagnostico": [130,455],
           "personas_con_quien_vive": [{
-            "nombre": [135,378],
-            "relación": [330,378]
-          },
-          {
-            "nombre": [135,359],
-            "relación": [330,359]
-          },
-          {
-            "nombre": [135,340],
-            "relación": [330,340]
-          },
-          {
-            "nombre": [135,320],
-            "relación": [330,320]
-          }
-        ],
+              "nombre": [135,378],
+              "relación": [330,378]
+            },
+            {
+              "nombre": [135,359],
+              "relación": [330,359]
+            },
+            {
+              "nombre": [135,340],
+              "relación": [330,340]
+            },
+            {
+              "nombre": [135,320],
+              "relación": [330,320]
+            }
+          ],
           "datos_emergencia": {
             "prioridad_1": {
               "nombre": [130,185],
@@ -250,7 +250,7 @@
               "telefono": [250,122],
               "celular": [450,122]
             }
-        }
+          }
         }
       },
       "hoja_2": {
@@ -301,6 +301,7 @@
           "madre": [173,120],
           "tutor": [240,120]
         }
+      }
     },
     "FICHA-DE-SALUD-2025-La-Florida-1": {
       "hoja_1": {}
