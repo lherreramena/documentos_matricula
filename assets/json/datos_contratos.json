@@ -132,6 +132,9 @@
       "hoja_1": {
         "alumnos": [
           { "nombre": "Pedro Pérez", "curso": "3° Básico" },
+          { "nombre": "Pedro Pérez", "curso": "3° Básico" },
+          { "nombre": "Pedro Pérez", "curso": "3° Básico" },
+          { "nombre": "Pedro Pérez", "curso": "3° Básico" },
           { "nombre": "María Pérez", "curso": "1° Medio" }
         ],
         "nombre_apoderado": "",
@@ -181,6 +184,55 @@
           "responsable_profesion": "Ingeniera",
           "responsable_trabajo": "Empresa ABC",
           "responsable_tel_trabajo": "22334455"
+        }
+      },
+      "hoja_2": {
+        "datos_responsable": {
+          "nombre_completo": "",
+          "rut": "",
+          "relacion_madre": "",
+          "relacion_padre": "",
+          "relacion_tutor": "",
+          "correo": "",
+          "celular": "",
+          "profesion": "",
+          "lugar_trabajo": "",
+          "tel_trabajo": "",
+          "direccion": ""
+        },
+        "datos_segundo_progenitor": {
+          "nombre_completo": "",
+          "rut": "",
+          "relacion_madre": "",
+          "relacion_padre": "",
+          "profesion": "",
+          "lugar_trabajo": "",
+          "tel_trabajo": "",
+          "celular": "",
+          "correo": "",
+          "direccion": ""
+        }
+      },
+      "hoja_3": {
+        "apoderado": {
+          "nombre_completo": "",
+          "rut": "",
+          "relacion_con_alumno": "",
+          "celular": "",
+          "correo": "",
+          "profesion": "",
+          "lugar_trabajo": "",
+          "tel_trabajo": "",
+          "direccion": "",
+          "comuna": "",
+          "fecha": ""
+        },
+        "firma": {
+          "nombre_completo": "",
+          "rut": "",
+          "padre": "",
+          "madre": "",
+          "tutor": ""
         }
       }
     },
